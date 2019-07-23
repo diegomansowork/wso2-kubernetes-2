@@ -25,8 +25,8 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: <NFS_SERVER_IP>
-    path: "<NFS_LOCATION_PATH>"
+    server: 192.168.99.1
+    path: /nfswso2/apim
 
 ---
 
@@ -43,8 +43,8 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: <NFS_SERVER_IP>
-    path: "<NFS_LOCATION_PATH>"
+    server: 192.168.99.1
+    path: /nfswso2/gateway
 
 ---
 
@@ -61,5 +61,5 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: <NFS_SERVER_IP>
-    path: "<NFS_LOCATION_PATH>"
+    server: 192.168.99.1
+    path: /nfswso2/km

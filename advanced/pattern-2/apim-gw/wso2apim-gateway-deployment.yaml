@@ -58,11 +58,11 @@ spec:
               command:  ['sh', '-c', '${WSO2_SERVER_HOME}/bin/wso2server.sh stop']
         resources:
           requests:
-            memory: 2Gi
-            cpu: 2000m
+            memory: 512Mi
+            cpu: 200m
           limits:
-            memory: 3Gi
-            cpu: 3000m
+            memory: 1Gi
+            cpu: 300m
         imagePullPolicy: Always
         securityContext:
           runAsUser: 802

@@ -1,3 +1,4 @@
+
 # Kubernetes Resources for deployment of WSO2 API Manager with a separate Gateway and a separate Key Manager
 
 Core Kubernetes resources for [WSO2 API Manager deployment pattern 2](https://docs.wso2.com/display/AM220/Deployment+Patterns#DeploymentPatterns-Pattern2).
@@ -252,9 +253,9 @@ kubectl create -f <KUBERNETES_HOME>/rbac/rbac.yaml
 
   * Kubernetes Persistent Volume resources for the above Volume Claims created.
 
-  ```
+  ``
   kubectl create -f <KUBERNETES_HOME>/advanced/pattern-2/volumes/persistent-volumes.yaml
-```
+  ``
 
 ##### 7. Create Kubernetes ConfigMaps for passing WSO2 product configurations into the Kubernetes cluster.
 

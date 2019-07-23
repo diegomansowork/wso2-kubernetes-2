@@ -1,0 +1,51 @@
+kubectl create configmap mysql-dbscripts --from-file=/home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/extras/confs/rdbms/mysql/dbscripts/
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/extras/rdbms/mysql/mysql-persistent-volume-claim.yaml
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/extras/rdbms/volumes/persistent-volumes.yaml
+
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/extras/rdbms/mysql/mysql-service.yaml
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/extras/rdbms/mysql/mysql-deployment.yaml
+
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/rbac/rbac.yaml
+
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/apim-gw/wso2apim-gateway-volume-claim.yaml
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/apim-pub-store-tm/wso2apim-pub-store-tm-volume-claim.yaml
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/apim-is-as-km/wso2apim-is-as-km-volume-claim.yaml
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/volumes/persistent-volumes.yaml
+
+kubectl create configmap apim-analytics-conf-worker --from-file=/home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/confs/apim-analytics/conf/worker
+
+kubectl create configmap apim-pub-store-tm-1-conf --from-file=/home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/confs/apim-pub-store-tm-1/
+kubectl create configmap apim-pub-store-tm-1-conf-datasources --from-file=/home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/confs/apim-pub-store-tm-1/datasources/
+kubectl create configmap apim-pub-store-tm-2-conf --from-file=/home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/confs/apim-pub-store-tm-2/
+kubectl create configmap apim-pub-store-tm-2-conf-datasources --from-file=/home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/confs/apim-pub-store-tm-2/datasources/
+
+kubectl create configmap apim-gateway-conf --from-file=/home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/confs/apim-gateway/
+kubectl create configmap apim-gateway-conf-axis2 --from-file=/home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/confs/apim-gateway/axis2/
+
+kubectl create configmap apim-km-conf --from-file=/home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/confs/apim-km/
+kubectl create configmap apim-km-conf-axis2 --from-file=/home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/confs/apim-km/axis2/
+kubectl create configmap apim-km-conf-datasources --from-file=/home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/confs/apim-km/datasources/
+
+kubectl create configmap apim-is-as-km-conf --from-file=/home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/confs/apim-is-as-km/
+kubectl create configmap apim-is-as-km-conf-axis2 --from-file=/home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/confs/apim-is-as-km/axis2/
+kubectl create configmap apim-is-as-km-conf-datasources --from-file=/home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/confs/apim-is-as-km/datasources/
+
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/apim-analytics/wso2apim-analytics-service.yaml
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/apim-pub-store-tm/wso2apim-pub-store-tm-1-service.yaml
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/apim-pub-store-tm/wso2apim-pub-store-tm-2-service.yaml
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/apim-pub-store-tm/wso2apim-pub-store-tm-service.yaml
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/apim-gw/wso2apim-gateway-service.yaml
+#kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/apim-km/wso2apim-km-service.yaml
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/apim-is-as-km/wso2apim-is-as-km-service.yaml
+
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/apim-analytics/wso2apim-analytics-deployment.yaml
+
+#kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/apim-km/wso2apim-km-deployment.yaml
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/apim-is-as-km/wso2apim-is-as-km-deployment.yaml
+
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/apim-pub-store-tm/wso2apim-pub-store-tm-1-deployment.yaml
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/apim-pub-store-tm/wso2apim-pub-store-tm-2-deployment.yaml
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/apim-gw/wso2apim-gateway-deployment.yaml
+
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/ingresses/wso2apim-gateway-ingress.yaml
+kubectl create -f /home/dmanso/wso2kubernetes/kubernetes-apim/advanced/pattern-2/ingresses/wso2apim-ingress.yaml
